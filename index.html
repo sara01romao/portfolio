@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css">
   <title>Portfólio</title>
 </head>
@@ -24,11 +27,11 @@
       </svg>
     </header>
     <div class="info">
-      <img class="img-perfil" src="./perfil.jpg" alt="Perfil">
+      <img class="img-perfil" src="./imgs/perfil.jpg" alt="Perfil">
       <div class="">
         <div class="title-info">
-          <h1>Sara Romão <span>Dev Full Stack</span></h1>
-          <a class="btn-cv" href="./cv-fullstack-sara-romao.pdf" download="sara-romao-cv.pdf">
+          <h1>Sara Romão <span>Desenvolvedora Fullstack </span></h1>
+          <a class="btn-cv" href="./cv-fullstack-js-sara-romao" download="sara-romao-cv.pdf">
             <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 4.25V0H0.75C0.334375 0 0 0.334375 0 0.75V15.25C0 15.6656 0.334375 16 0.75 16H11.25C11.6656 16 12 15.6656 12 15.25V5H7.75C7.3375 5 7 4.6625 7 4.25ZM9.38906 10.855L6.37594 13.8456C6.16812 14.0522 5.8325 14.0522 5.62469 13.8456L2.61156 10.855C2.29438 10.5403 2.51687 10 2.96312 10H5V7.5C5 7.22375 5.22375 7 5.5 7H6.5C6.77625 7 7 7.22375 7 7.5V10H9.03687C9.48312 10 9.70563 10.5403 9.38906 10.855ZM11.7812 3.28125L8.72188 0.21875C8.58125 0.078125 8.39063 0 8.19063 0H8V4H12V3.80938C12 3.6125 11.9219 3.42188 11.7812 3.28125Z"
@@ -38,11 +41,10 @@
           </a>
         </div>
         <div class="description_info">
-          <p>Desenvolvedora Front-end atuando na criação interfaces responsivas com HTML, CSS, JavaScript, TypeScript,
-            ReactJS e Figma, focando em UI/UX. Tenho experiência em integração com APIs e conhecimentos em Node.js e
-            SQL.</p>
-          <p>Acredito que desenvolver boas aplicações envolve lógica, entendimento do problema, contexto e perfil do
-            usuário, criando soluções funcionais e amigáveis.</p>
+          <p>Desenvolvo soluções funcionais do front-end ao back-end, incluindo integrações.
+            Unindo lógica de programação e usabilidade, transformo problemas reais em soluções úteis para usuários 
+            e muitas vezes para mim mesma ;)</p>
+          
           <div class="links-info">
             <a href="https://www.linkedin.com/in/sara-romao/" target="_blank">
               <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,208 +85,52 @@
   </main>
 
   <section class="projects-section">
+    <h2 class="title">Ferramentas & Tecnologias</h2>
+  
+    <div class="tech-list">
+      <div class="tech-list-container">
+        <div>
+          <h4 class="title-tech">Front-end</h4>
+          <p>
+            React.js, Next.js, JavaScript (ES6+), TypeScript, jQuery, HTML5, CSS3, Tailwind CSS e Bootstrap.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="title-tech">Back-end & Banco de Dados</h4>
+          Node.js, APIs RESTful, PostgreSQL, MySQL, JSON e integração de sistemas.
+        </div>
+
+        <div>
+          <h4 class="title-tech">Ferramentas & Design</h4>
+          Git, Docker, Figma e Postman.
+        </div>
+      </div>
+
+      <section class="logos-tech"></section>
+    </div>
+  </section>
+
+  <section class="projects-section">
     <h2 class="title">Projetos</h2>
 
     <div class="tab">
-      <button class="tablinks active" onclick="openProject(event, 'cinema')">Cinema</button>
+      <button class="tablinks active" onclick="openProject(event, 'feedback')">Feedback</button>
+      <button class="tablinks" onclick="openProject(event, 'bot-telegram-cripto')">Bot</button>
+      <button class="tablinks" onclick="openProject(event, 'cinema')">Cinema</button>
       <button class="tablinks" onclick="openProject(event, 'ia-frase')">IA Frase</button>
       <button class="tablinks" onclick="openProject(event, 'chat')">Chat</button>
     </div>
 
-    <div id="cinema" class="tabcontent">
-      <h3 class="title-project">Ingresso Cinema</h3>
-      <div class="project-container">
-        <div class="info-project">
-          <div>
-            <p>Este projeto permite que os usuários escolham filmes, datas, horários e tipos de ingressos. Utiliza
-              estados reativos para gerenciar a disponibilidade de poltronas (livres, ocupadas ou reservadas).</p>
-            <div class="links-projects">
-              <a href="https://github.com/Sara01romao/cinema-ingresso-reactjs-typescript" target="_blank">
-                Code
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.27994 14.9854L6.46914 14.4668C6.27916 14.4141 6.17229 14.2178 6.22572 14.0302L10.2778 0.253813C10.3312 0.0662987 10.5301 -0.039178 10.7201 0.0135604L12.5309 0.532154C12.7208 0.584892 12.8277 0.781196 12.7743 0.96871L8.72225 14.7451C8.66585 14.9327 8.46992 15.0411 8.27994 14.9854ZM4.89583 11.698L6.18713 10.3386C6.32369 10.195 6.31478 9.96646 6.16339 9.83461L3.47391 7.49948L6.16339 5.16434C6.31478 5.03249 6.32665 4.80396 6.18713 4.66039L4.89583 3.30092C4.76224 3.16028 4.53664 3.15149 4.39118 3.28627L0.113546 7.24164C-0.0378486 7.37935 -0.0378486 7.61667 0.113546 7.75438L4.39118 11.7127C4.53664 11.8475 4.76224 11.8416 4.89583 11.698ZM14.6088 11.7156L18.8865 7.75731C19.0378 7.6196 19.0378 7.38228 18.8865 7.24457L14.6088 3.28334C14.4663 3.15149 14.2407 3.15735 14.1042 3.29799L12.8129 4.65746C12.6763 4.80103 12.6852 5.02956 12.8366 5.16141L15.5261 7.49948L12.8366 9.83461C12.6852 9.96646 12.6733 10.195 12.8129 10.3386L14.1042 11.698C14.2378 11.8416 14.4634 11.8475 14.6088 11.7156Z"
-                    fill="white" />
-                </svg>
-              </a>
-              <a href="https://sistema-ingresso-cinema.netlify.app/" target="_blank">
-                View
-                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.6563 9.375H11.7188C11.5944 9.375 11.4752 9.42439 11.3873 9.51229C11.2994 9.6002 11.25 9.71943 11.25 9.84375V13.125H1.875V3.75H6.09375C6.21807 3.75 6.3373 3.70061 6.42521 3.61271C6.51311 3.5248 6.5625 3.40557 6.5625 3.28125V2.34375C6.5625 2.21943 6.51311 2.1002 6.42521 2.01229C6.3373 1.92439 6.21807 1.875 6.09375 1.875H1.40625C1.03329 1.875 0.675604 2.02316 0.411881 2.28688C0.148158 2.5506 0 2.90829 0 3.28125L0 13.5938C0 13.9667 0.148158 14.3244 0.411881 14.5881C0.675604 14.8518 1.03329 15 1.40625 15H11.7188C12.0917 15 12.4494 14.8518 12.7131 14.5881C12.9768 14.3244 13.125 13.9667 13.125 13.5938V9.84375C13.125 9.71943 13.0756 9.6002 12.9877 9.51229C12.8998 9.42439 12.7806 9.375 12.6563 9.375ZM14.2969 0H10.5469C9.9208 0 9.60791 0.759082 10.0488 1.20117L11.0956 2.24795L3.95508 9.38584C3.88953 9.45116 3.83752 9.52878 3.80203 9.61425C3.76654 9.69972 3.74827 9.79135 3.74827 9.88389C3.74827 9.97643 3.76654 10.0681 3.80203 10.1535C3.83752 10.239 3.88953 10.3166 3.95508 10.3819L4.61924 11.0449C4.68456 11.1105 4.76218 11.1625 4.84765 11.198C4.93311 11.2335 5.02474 11.2517 5.11729 11.2517C5.20983 11.2517 5.30146 11.2335 5.38692 11.198C5.47239 11.1625 5.55001 11.1105 5.61533 11.0449L12.7523 3.90586L13.7988 4.95117C14.2383 5.39063 15 5.08301 15 4.45313V0.703125C15 0.516645 14.9259 0.337802 14.7941 0.205941C14.6622 0.074079 14.4834 0 14.2969 0Z"
-                    fill="white" />
-                </svg>
+    <div id="projects"></div>
 
-              </a>
-            </div>
-          </div>
-          <img src="./imgs/project-movies.png" alt="Ingresso Cinema">
-        </div>
-
-        <div class="mini-guide">
-          <h3>Mini Guide</h3>
-          <div class="guide-container">
-            <div>
-              <h5>Tech</h5>
-              <ul>
-                <li>ReactJs</li>
-                <li>TypeScript</li>
-                <li>Figma</li>
-              </ul>
-            </div>
-
-            <div>
-              <h5>Typography</h5>
-              <h4>Helvetica</h4>
-              <ul>
-                <li>Bold</li>
-                <li>Medium</li>
-                <li>Normal</li>
-              </ul>
-            </div>
-
-            <div>
-              <h5>Color Schema</h5>
-              <ul class="colors">
-                <li style="background: #0f0418 ;">#0f0418</li>
-                <li style="background: #fff; color: #000">#fff</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="ia-frase" class="tabcontent">
-      <h3 class="title-project">WebFrase IA</h3>
-      <div class="project-container">
-        <div class="info-project">
-          <div>
-            <p>
-              Aplicação web para gerar frases automáticas para posts em datas comerciais e comemorativas com Inteligência Artificial, facilitando a criação de conteúdo para redes sociais.
-            </p>
-            <div class="links-projects">
-              <a href="https://github.com/Sara01romao/webfrase-react-typescript-ia-nodejs-express?tab=readme-ov-file" target="_blank">
-                Code
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.27994 14.9854L6.46914 14.4668C6.27916 14.4141 6.17229 14.2178 6.22572 14.0302L10.2778 0.253813C10.3312 0.0662987 10.5301 -0.039178 10.7201 0.0135604L12.5309 0.532154C12.7208 0.584892 12.8277 0.781196 12.7743 0.96871L8.72225 14.7451C8.66585 14.9327 8.46992 15.0411 8.27994 14.9854ZM4.89583 11.698L6.18713 10.3386C6.32369 10.195 6.31478 9.96646 6.16339 9.83461L3.47391 7.49948L6.16339 5.16434C6.31478 5.03249 6.32665 4.80396 6.18713 4.66039L4.89583 3.30092C4.76224 3.16028 4.53664 3.15149 4.39118 3.28627L0.113546 7.24164C-0.0378486 7.37935 -0.0378486 7.61667 0.113546 7.75438L4.39118 11.7127C4.53664 11.8475 4.76224 11.8416 4.89583 11.698ZM14.6088 11.7156L18.8865 7.75731C19.0378 7.6196 19.0378 7.38228 18.8865 7.24457L14.6088 3.28334C14.4663 3.15149 14.2407 3.15735 14.1042 3.29799L12.8129 4.65746C12.6763 4.80103 12.6852 5.02956 12.8366 5.16141L15.5261 7.49948L12.8366 9.83461C12.6852 9.96646 12.6733 10.195 12.8129 10.3386L14.1042 11.698C14.2378 11.8416 14.4634 11.8475 14.6088 11.7156Z"
-                    fill="white" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <img src="./imgs/project-ia.png" alt="Gerador de frase com ia">
-        </div>
-
-        <div class="mini-guide">
-          <h3>Mini Guide</h3>
-          <div class="guide-container">
-            <div>
-              <h5>Tech</h5>
-              <ul>
-                <li>ReactJs</li>
-                <li>TypeScript</li>
-                <li>NodeJs</li>
-                <li>TypeScript</li>
-                <li>ExpressJs</li>
-                <li>Figma</li>
-              </ul>
-            </div>
-
-            <div>
-              <h5>Typography</h5>
-              <h4>Inter</h4>
-              <ul>
-                <li>Bold</li>
-                <li>Medium</li>
-                <li>Normal</li>
-              </ul>
-            </div>
-
-            <div>
-              <h5>Color Schema</h5>
-              <ul class="colors">
-                <li style="background: #FF6C47; color: #000">#FF6C47</li>
-                <li style="background: #000; color: #fff">#000</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="chat" class="tabcontent">
-      <h3 class="title-project">Chat</h3>
-      <div class="project-container">
-        <div class="info-project">
-          <div>
-            <p>Chat em tempo real desenvolvido com Node.js, Express, jQuery e Socket.IO, permitindo troca instantânea de mensagens entre usuários.</p>
-            <div class="links-projects">
-              <a href="https://github.com/Sara01romao/chat-socket-io" target="_blank">
-                Code
-                <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M8.27994 14.9854L6.46914 14.4668C6.27916 14.4141 6.17229 14.2178 6.22572 14.0302L10.2778 0.253813C10.3312 0.0662987 10.5301 -0.039178 10.7201 0.0135604L12.5309 0.532154C12.7208 0.584892 12.8277 0.781196 12.7743 0.96871L8.72225 14.7451C8.66585 14.9327 8.46992 15.0411 8.27994 14.9854ZM4.89583 11.698L6.18713 10.3386C6.32369 10.195 6.31478 9.96646 6.16339 9.83461L3.47391 7.49948L6.16339 5.16434C6.31478 5.03249 6.32665 4.80396 6.18713 4.66039L4.89583 3.30092C4.76224 3.16028 4.53664 3.15149 4.39118 3.28627L0.113546 7.24164C-0.0378486 7.37935 -0.0378486 7.61667 0.113546 7.75438L4.39118 11.7127C4.53664 11.8475 4.76224 11.8416 4.89583 11.698ZM14.6088 11.7156L18.8865 7.75731C19.0378 7.6196 19.0378 7.38228 18.8865 7.24457L14.6088 3.28334C14.4663 3.15149 14.2407 3.15735 14.1042 3.29799L12.8129 4.65746C12.6763 4.80103 12.6852 5.02956 12.8366 5.16141L15.5261 7.49948L12.8366 9.83461C12.6852 9.96646 12.6733 10.195 12.8129 10.3386L14.1042 11.698C14.2378 11.8416 14.4634 11.8475 14.6088 11.7156Z"
-                    fill="white" />
-                </svg>
-              </a>
-              <a href="https://www.youtube.com/shorts/txRU-mOOFHo" target="_blank">
-              <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="6" y="3" width="8" height="8" fill="white"/>
-                <path d="M20.5612 2.19053C20.3197 1.32829 19.6081 0.649214 18.7046 0.41876C17.0669 0 10.5 0 10.5 0C10.5 0 3.93315 0 2.29544 0.41876C1.39193 0.64925 0.680333 1.32829 0.438815 2.19053C0 3.75339 0 7.01415 0 7.01415C0 7.01415 0 10.2749 0.438815 11.8378C0.680333 12.7 1.39193 13.3508 2.29544 13.5812C3.93315 14 10.5 14 10.5 14C10.5 14 17.0668 14 18.7046 13.5812C19.6081 13.3508 20.3197 12.7 20.5612 11.8378C21 10.2749 21 7.01415 21 7.01415C21 7.01415 21 3.75339 20.5612 2.19053ZM8.35226 9.97467V4.05362L13.8409 7.01422L8.35226 9.97467Z" fill="#F64C4C"/>
-              </svg>
-              </a>
-            </div>
-          </div>
-          <img src="./imgs/project-chat.png" alt="Chat ">
-        </div>
-
-        <div class="mini-guide">
-          <h3>Mini Guide</h3>
-          <div class="guide-container">
-            <div>
-              <h5>Tech</h5>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Jquery</li>
-                <li>NodeJs</li>
-                <li>ExpressJs</li>
-                <li>Socket.io</li>
-                <li>Figma</li>
-              </ul>
-            </div>
-
-            <div>
-              <h5>Typography</h5>
-              <h4>Inter</h4>
-              <ul>
-                <li>Bold</li>
-                <li>Medium</li>
-                <li>Normal</li>
-              </ul>
-              <br>
-              <h4>Inria Sans</h4>
-              <ul>
-                <li>Bold</li>
-              </ul>
-            </div>
-
-            <div>
-              <h5>Color Schema</h5>
-              <ul class="colors">
-                <li style="background: #34C081; color: #000">#34C081</li>
-                <li style="background: #1E1E1E; color: #fff">#1E1E1E</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
-  
-  <script src="./script.js"></script>
+    
+  <script src="./script/jquery.min.js"></script>
+  <script defer src="./script/tabs.js"></script>
+  <script defer src="./script/projects-data.js"></script>
+  <script defer src="./script/project-component.js"></script>
+  <script defer src="./script/logo-tech-component.js"></script>
+
 </body>
-
-
 </html>
-
