@@ -90,6 +90,8 @@ header {
 .title-info {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .title-info h1 {
@@ -114,8 +116,10 @@ header {
   height: max-content;
   padding: 10px;
   transition: 0.5s ease-out;
-  border: 1px solid #333550;
-  border-radius: 4px;
+      background: rgb(25, 50, 88);
+    border-width: 1px 2px 2px 1px;
+    border-style: solid;
+    border-color: rgba(238, 204, 221, 0.867) black black rgba(238, 204, 221, 0.867);
 }
 
 .description_info {
@@ -185,6 +189,8 @@ header {
   margin: 20px;
   color: #fff;
   margin: 0 auto;
+  font-family: "Space Mono", monospace;
+  font-weight: normal;
 }
 
 .window-container {
@@ -219,17 +225,17 @@ header {
   position: relative;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 20px 30px 0px;
+  padding: 10px 30px 0px;
 }
 
-.tab::after {
+/* .tab::after {
   content: "";
   width: 700px;
   height: 1px;
   background: #ababab;
   position: absolute;
   bottom: 1px;
-}
+} */
 
 .tab button {
   background-color: inherit;
@@ -241,6 +247,8 @@ header {
   transition: 0.3s;
   font-size: 17px;
   color: #fff;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .tab button:hover {
@@ -313,10 +321,11 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .tech-list {
-  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -335,7 +344,6 @@ header {
 .title-project {
   color: var(--color-primary);
   font-size: 30px;
-  font-weight: normal;
   margin-bottom: 33px;
 }
 
@@ -378,14 +386,17 @@ header {
 
 .links-projects a {
   color: #fff;
-  background: #000;
   padding: 10px 15px;
-  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
   transition: 0.5s ease;
+  background: #193258;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 1px solid #ecdd;
+  border-top: 1px solid #ecdd;
 }
 
 .links-projects a:hover {
@@ -432,6 +443,12 @@ header {
   gap: 10px;
   flex-wrap: wrap;
   color: #c1c1c1;
+}
+
+@media screen and (max-width:365px){
+  .guide-container ul{
+    flex-direction: column;
+  }
 }
 
 .colors {
