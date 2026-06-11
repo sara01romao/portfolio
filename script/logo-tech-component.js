@@ -58,10 +58,7 @@ const techLogos = [
     name: "JSON",
     img: "https://cdn-icons-png.flaticon.com/512/136/136525.png"
   },
-  {
-    name: "Integração de Sistemas",
-    img: "https://cdn-icons-png.flaticon.com/512/1995/1995485.png"
-  },
+  
 
   // Ferramentas & Design
   {
@@ -83,6 +80,6 @@ const techLogos = [
 ]
 
 techLogos.forEach(logo =>{
-  let image = $("<img>", {src: logo.img, alt:logo.name});
+  let image = $("<img>", {src: logo.img, class:"pulse-soft", alt:logo.name});
   $(".logos-tech").append(image);
 })

@@ -2,10 +2,10 @@ projects.forEach((project, index) => {
   $("#projects").append(`
 
     <div id="${project.id}" class="tabcontent" style="display:${index === 0 ? "block" : "none"}">
-      <h3 class="title-project">${project.title}</h3>
       <div class="project-container">
         <div class="info-project">
           <div>
+            <h3 class="title-project">${project.title}</h3>
             <p>
               ${project.description}
             </p>

@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
   <link rel="stylesheet" href="styles.css">
   <title>Portfólio</title>
 </head>
@@ -26,6 +26,7 @@
           fill="#EC6990" />
       </svg>
     </header>
+
     <div class="info">
       <img class="img-perfil" src="./imgs/perfil.jpg" alt="Perfil">
       <div class="">
@@ -45,7 +46,7 @@
             Unindo lógica de programação e usabilidade, transformo problemas em soluções úteis para usuários 
             e muitas vezes para mim mesma ;)</p>
           
-          <div class="links-info">
+          <div class="links-info fade-down "  data-aos-duration="1000">
             <a href="https://www.linkedin.com/in/sara-romao/" target="_blank">
               <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -112,17 +113,27 @@
   </section>
 
   <section class="projects-section">
-    <h2 class="title">Projetos</h2>
+    
+    <div class="window-container">
+      <div class="window">
+        <h2 class="title">Projetos</h2>
+        <div>
+          <i class="fa-regular fa-square"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
 
-    <div class="tab">
-      <button class="tablinks active" onclick="openProject(event, 'feedback')">Feedback</button>
-      <button class="tablinks" onclick="openProject(event, 'bot-telegram-cripto')">Bot</button>
-      <button class="tablinks" onclick="openProject(event, 'cinema')">Cinema</button>
-      <button class="tablinks" onclick="openProject(event, 'ia-frase')">IA Frase</button>
-      <button class="tablinks" onclick="openProject(event, 'chat')">Chat</button>
+      <div class="tab">
+        <button class="tablinks active" onclick="openProject(event, 'feedback')">Feedback</button>
+        <button class="tablinks" onclick="openProject(event, 'bot-telegram-cripto')">Bot</button>
+        <button class="tablinks" onclick="openProject(event, 'cinema')">Cinema</button>
+        <button class="tablinks" onclick="openProject(event, 'ia-frase')">IA Frase</button>
+        <button class="tablinks" onclick="openProject(event, 'chat')">Chat</button>
+      </div>
+
+      <div id="projects"></div>
+
     </div>
-
-    <div id="projects"></div>
 
   </section>
     
