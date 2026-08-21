@@ -1,18 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 :root {
-  --color-primary: #ec6990;
-  --bg-color: #1e2a47;
+  /* --color-primary: #ec6990;
+  --bg-color: #1e2a47; */
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #1e2a47;
-}
 
 a {
   text-decoration: none;
@@ -22,20 +14,21 @@ ul {
   list-style: none;
 }
 
-main {
+/* main {
   background-image: url("./imgs/bg-home.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding: 50px 0px;
-}
+} */
 
-header {
+/* header {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-}
+  margin-top:50px;
+} */
 
 #arrow-left {
   transform: translateX(26px);
@@ -67,7 +60,13 @@ header {
   }
 }
 
-.info {
+.detail::after {
+  content: url("./imgs/detail-title.svg");
+  position: relative;
+  bottom: 10px;
+}
+
+/* .info {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
@@ -236,7 +235,7 @@ header {
   position: absolute;
   bottom: 1px;
 } */
-
+/* 
 .tab button {
   background-color: inherit;
   float: left;
@@ -529,4 +528,4 @@ header {
   50% {
     transform: scale(1.04);
   }
-}
+} */ */

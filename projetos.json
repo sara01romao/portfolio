@@ -1,0 +1,129 @@
+{
+  "musica-acordes": {
+    "titulo": "Música - Acordes",
+    "subtitulo": "Projeto",
+    "descricao": "Aplicação web desenvolvida para auxiliar músicos iniciantes na prática de acordes, troca de posições e controle de ritmo.",
+    "links": {
+      "github": "https://github.com/sara01romao/music-practice-react-typescript",
+      "youtube": "https://youtube.com/shorts/PiupAmhRaow?si=4nxmWPn0DCCha3eq",
+      "deploy": "https://music-practice-tool.pages.dev"
+    },
+    "imagemPrincipal": "./imgs/musica-main.png",
+    "galeria": [
+      "./imgs/music-1.png",
+      "./imgs/music-0.png",
+      "./imgs/music-2.png",
+      "./imgs/music-3.png"
+    ],
+    "contexto": {
+      "subtitulo": "proposta do projeto",
+      "p1": "Durante a prática de violão, algumas das dificuldades comuns para iniciantes são memorizar os formatos dos acordes, realizar a troca entre eles com fluidez e manter um ritmo constante.",
+      "p2": "A proposta do projeto foi reunir essas práticas em uma única ferramenta, permitindo consultar acordes, praticar progressões e utilizar um metrônomo durante os exercícios."
+    },
+    "userFlow": {
+      "subtitulo": "Fluxo principal de navegação",
+      "imagem": "./imgs/user-flow-musica.png"
+    },
+    "userStory": {
+      "subtitulo": "Objetivo do usuário",
+      "descricao": "Como estudante de violão, quero consultar acordes, praticar progressões e controlar o ritmo com um metrônomo, para desenvolver precisão e fluidez durante meus estudos.",
+      "topicos": [
+        "Objetivo: praticar",
+        "Recursos: acordes + exercícios + metrônomo",
+        "Resultado esperado: realizar uma prática musical estruturada"
+      ]
+    },
+    "desenvolvimento": "Reactjs - Typescript - Tailwind - Vite - Figma",
+    "estilo": {
+      "fonte": "Helvetica",
+      "cores": [
+        { "hex": "#2B92C9" },
+        { "hex": "#FFFFFF", "borda": true },
+        { "hex": "#000000" }
+      ]
+    }
+  },
+
+  "feedback-anonimo": {
+    "titulo": "Sistema de Feedback Anônimo",
+    "subtitulo": "Projeto",
+    "descricao": "Aplicação Full Stack desenvolvida para permitir que empresas recebam sugestões, críticas e comentários de forma anônima, utilizando um código único para identificar o destino de cada feedback.",
+    "links": {
+      "github": "https://github.com/sara01romao/feedback-nodejs-typescript-docker-postgres-nextjs",
+      "youtube": "https://www.youtube.com/watch?v=wIjkg5F5A3k"
+    },
+    "imagemPrincipal": "./imgs/feedback-main.png",
+    "galeria": [
+      "./imgs/feedback.png",
+      "./imgs/feedback-1.png"
+    ],
+    "contexto": {
+      "subtitulo": "proposta do projeto",
+      "p1": "A coleta de feedback é importante para que empresas compreendam a opinião de seus usuários. Porém, quando é necessário se identificar, algumas pessoas podem deixar de compartilhar sugestões, críticas e comentários de forma aberta.",
+      "p2": "A proposta do projeto foi criar um canal de feedback anônimo, no qual cada empresa possui um código único para receber opiniões, enquanto um painel permite acessar e filtrar os feedbacks recebidos."
+    },
+    "userFlow": {
+      "subtitulo": "Fluxo principal de interação",
+      "imagem": "./imgs/user-flow-feedback.png"
+    },
+    "userStory": {
+      "subtitulo": "Objetivo do usuário",
+      "descricao": "Como usuário, quero enviar sugestões, críticas ou comentários de forma anônima para uma empresa, para compartilhar minha opinião sem precisar informar minha identidade.",
+      "topicos": [
+        "Objetivo: enviar uma opinião de forma anônima",
+        "Recursos: código da empresa + formulário de feedback",
+        "Resultado esperado: feedback vinculado à empresa correta"
+      ]
+    },
+    "desenvolvimento": "Next.js - Tailwind - Node.js - TypeScript - Fastify - PostgreSQL - Prisma - Docker - JWT - Figma",
+    "estilo": {
+      "fonte": "Inter",
+      "cores": [
+        {
+          "hex": "#8B73EB"
+        },
+        {
+          "hex": "#FFFFFF",
+          "borda": true
+        },
+        {
+          "hex": "#000000"
+        }
+      ]
+    }
+  },
+
+  "bot-telegram-cripto": {
+    "titulo": "Bot Telegram - Cripto",
+    "subtitulo": "Projeto",
+    "descricao": "Bot desenvolvido para enviar relatórios automáticos sobre a cotação de criptomoedas diretamente no Telegram, integrando APIs externas e tarefas agendadas.",
+    "links": {
+      "github": "https://github.com/sara01romao/bot-telegram-cripto-nodejs-fastify-api"
+    },
+    "imagemPrincipal": "./imgs/cripto-main.png",
+    "galeria": [
+      "./imgs/bot.png"
+      
+    ],
+    "contexto": {
+      "subtitulo": "proposta do projeto",
+      "p1": "Acompanhar manualmente as cotações de criptomoedas exige consultar diferentes informações e repetir esse processo sempre que uma atualização é necessária.",
+      "p2": "A proposta do projeto foi automatizar esse processo por meio de um bot que consulta dados de criptomoedas, gera relatórios com preço e horário da atualização e envia as informações diretamente para o Telegram."
+    },
+    "userFlow": {
+      "subtitulo": "Fluxo principal de funcionamento",
+      "imagem": "./imgs/uf-bot.png"
+    },
+    "userStory": {
+      "subtitulo": "Objetivo do usuário",
+      "descricao": "Como usuário interessado em acompanhar criptomoedas, quero receber relatórios automáticos com informações atualizadas diretamente no Telegram, para consultar as cotações de forma rápida e sem precisar realizar buscas manualmente.",
+      "topicos": [
+        "Objetivo: acompanhar cotações de criptomoedas",
+        "Recursos: consulta à API + bot do Telegram + relatórios automáticos",
+        "Resultado esperado: receber informações atualizadas diretamente no Telegram"
+      ]
+    },
+    "desenvolvimento": "Node.js - Fastify - node-cron - node-telegram-bot-api - CoinGecko API - Telegram Bot API",
+    "estilo": null
+  }
+}
