@@ -19,6 +19,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Script do Lenis via CDN -->
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
@@ -708,10 +710,12 @@
 
     <div
       id="project-modal"
+      data-lenis-prevent
       class="fixed inset-0 z-50 hidden opacity-0 transition-opacity duration-300 ease-out flex items-end justify-center bg-black/60 backdrop-blur-sm pb-0 overflow-y-auto"
     >
       <div
         id="modal-panel"
+        data-lenis-prevent
         class="relative w-full bg-white rounded-t-3xl shadow-2xl transform translate-y-full transition-transform duration-300 ease-out max-h-[90vh] overflow-y-auto"
       >
         <div
@@ -892,7 +896,7 @@
     </div>
 
     <script src="./script/jquery.min.js"></script>
-    <script defer src="./script/tabs.js"></script>
+    <script defer src="./script/scroll-view.js"></script>
     <script defer src="./script/projects-data.js"></script>
     <script defer src="./script/project-component.js"></script>
     <script defer src="./script/logo-tech-component.js"></script>
