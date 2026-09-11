@@ -73,34 +73,34 @@ $(document).ready(function () {
       // Seção Desenvolvimento
       $('#modal-desenvolvimento').text(projeto.desenvolvimento);
 
-   if (!projeto.estilo) {
-      $('#estilo').hide();
-    } else {
-      $('#estilo').show();
+      if (!projeto.estilo) {
+        $('#estilo').hide();
+      } else {
+        $('#estilo').show();
 
-      // Fonte
-      $('#modal-estilo-fonte').text(projeto.estilo.fonte);
+        // Fonte
+        $('#modal-estilo-fonte').text(projeto.estilo.fonte);
 
-      // Cores
-      const $coresContainer = $('#modal-estilo-cores').empty();
+        // Cores
+        const $coresContainer = $('#modal-estilo-cores').empty();
 
-      projeto.estilo.cores.forEach((cor) => {
-        $coresContainer.append(`
-          <div class="flex flex-col items-start gap-1">
-            <div
-              class="w-16 h-8 rounded-md ${
-                cor.borda ? 'border border-gray-200' : ''
-              }"
-              style="background-color: ${cor.hex};">
+        projeto.estilo.cores.forEach((cor) => {
+          $coresContainer.append(`
+            <div class="flex flex-col items-start gap-1">
+              <div
+                class="w-16 h-8 rounded-md ${
+                  cor.borda ? 'border border-gray-200' : ''
+                }"
+                style="background-color: ${cor.hex};">
+              </div>
+
+              <span class="text-base font-semibold text-gray-600">
+                ${cor.hex}
+              </span>
             </div>
-
-            <span class="text-base font-semibold text-gray-600">
-              ${cor.hex}
-            </span>
-          </div>
-        `);
-      });
-    }
+          `);
+        });
+      }
 
       // Exibir Modal com Transição Slide-Up
       const $modal = $('#project-modal');
@@ -113,6 +113,11 @@ $(document).ready(function () {
       setTimeout(() => {
         $modal.removeClass('opacity-0').addClass('opacity-100');
         $panel.removeClass('translate-y-full').addClass('translate-y-0');
+
+        // RESET DO SCROLL AQUI: após remover o 'hidden' e iniciar a exibição
+        $('#modal-container').scrollTop(0);
+        $modal.scrollTop(0);
+        $panel.scrollTop(0);
       }, 10);
     });
   });
@@ -147,5 +152,5 @@ $(document).ready(function () {
       fecharModal();
     }
   });
-  
+
 });
